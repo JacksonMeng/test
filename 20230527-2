@@ -1,1 +1,14 @@
-//
+// this code use to show type casting
+public class TypeCastingExample {
+    public static void main(String[] args) {
+        // Implicit Casting (Widening Conversion)
+        int num1 = 100;
+        double num2 = num1; // Implicitly cast int to double
+        System.out.println("num2: " + num2); // Output: 100.0
+
+        // Explicit Casting (Narrowing Conversion)
+        double num3 = 123.45;
+        int num4 = (int) num3; // Explicitly cast double to int
+        System.out.println("num4: " + num4); // Output: 123
+    }
+}
