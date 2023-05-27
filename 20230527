@@ -1,1 +1,31 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        // Declaration and assignment of int
+        int num1 = 10;
+        int num2 = 20;
+        int sum = num1 + num2;
+        System.out.println("Sum (int): " + sum);
 
+        // Declaration and assignment of Integer
+        Integer numObj1 = Integer.valueOf(30);
+        Integer numObj2 = Integer.valueOf(40);
+        Integer sumObj = numObj1 + numObj2;
+        System.out.println("Sum (Integer): " + sumObj);
+
+        // Nullability
+        Integer nullableNum = null;
+        System.out.println("Nullable Integer: " + nullableNum);
+
+        // Usage in Collections and Generics
+        List<Integer> numberList = new ArrayList<>();
+        numberList.add(50);
+        numberList.add(60);
+        System.out.println("Number List: " + numberList);
+
+        // Utility Methods
+        String strNumber = "75";
+        int parsedInt = Integer.parseInt(strNumber);
+        System.out.println("Parsed Integer: " + parsedInt);
+    }
+}
