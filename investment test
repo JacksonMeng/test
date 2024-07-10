@@ -1,0 +1,27 @@
+def calculate_investment(x, y, N, growth_rate=0.10):
+    """
+    Calculate the total investment value after N years with an annual growth rate and monthly contributions.
+
+    Parameters:
+    x (float): Initial investment amount.
+    y (float): Monthly contribution to the investment.
+    N (int): Number of years to calculate the growth.
+    growth_rate (float): Annual growth rate expressed as a decimal.
+
+    Returns:
+    float: Total value of the investment after N years.
+    """
+    total_amount = x
+    monthly_growth_rate = (1 + growth_rate) ** (1/12) - 1  # Convert annual growth rate to monthly
+
+    for month in range(N * 12):
+        total_amount = total_amount * (1 + monthly_growth_rate) + y
+
+    return total_amount
+
+# Example usage:
+initial_investment = 1000.0  # initial investment amount
+monthly_contribution = 100.0  # monthly contribution
+years = 5  # period in years
+final_amount = calculate_investment(initial_investment, monthly_contribution, years)
+print(f"The total value of the investment after {years} years is: ${final_amount:.2f}")
